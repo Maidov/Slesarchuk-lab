@@ -7,4 +7,4 @@
 ## Задние
 Вариант № 11
 
-[](https://github.com/Maidov/Slesarchuk-lab/blob/LAB-14-Slesarchuk/index.jpeg?raw=true)
+![](https://github.com/Maidov/Slesarchuk-lab/blob/LAB-14-Slesarchuk/index.jpeg?raw=true)
