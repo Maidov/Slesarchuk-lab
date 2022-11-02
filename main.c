@@ -24,18 +24,6 @@ int main() {
       scanf("%d", &matrix[i]);
   }
 
-  /*
-  // Вывод матрицы
-  putchar('\n');
-  for (int i = 0; i != n*n; ++i) {
-     printf("%d ", matrix[i]);
-
-     if (!((i + 1) % n)) {
-       printf("\n");
-     }
-  }
-  */
-
   int alfa = n - 1, current = (n * n) - 1;
 
   // Первая часть
