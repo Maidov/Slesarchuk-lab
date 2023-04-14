@@ -3,7 +3,8 @@
 #include <string.h>
 
 typedef struct {
-    char surname[15];
+    char n;
+    char *surname;
     char initial[4];
     char gender[1];
     char groupNum[2];
@@ -32,6 +33,8 @@ int main(void) {
                 continue;
             student* s = (student*) malloc (sizeof(student));
             int index = 0;
+            char surname[100];
+            int count = 0;
             for (int i = 0; i < n; ++i) {
                 if (buffer[i] == '\n') {
                     break;
@@ -42,9 +45,12 @@ int main(void) {
                     continue;
                 }
                 if (column == 0) {
-                    s -> surname[index] = buffer[i];
+                    ++count;
+                    surname[count - 1] = buffer[i];
                 }
-                if (column == 1) {
+                if (column == 1) { 
+                    s -> n = count;
+                    s -> surname = surname;
                     s -> initial[index] = buffer[i];
                 }
                 if (column == 2) {
