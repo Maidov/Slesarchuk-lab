@@ -27,23 +27,6 @@ void Swap(row* table, int intdex1, int intdex2){
     table[intdex2].value = bufVal;
 }
 
-void heapify(row* table, int size, int i){
-    int lrg = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
-    
-    if ((lrg < size) && (table[i].key < table[left].key)){
-        lrg = left;
-    }
-    if ((right < size) && (table[i].key < table[right].key)){
-        lrg = right;
-    }
-    if (lrg != i){
-        Swap(table, lrg, i);
-        heapify(table, size, lrg);
-    }
-}
-
 void Staff(row* table, int i, int currentSize){
     while (1) {
         int right = i * 2 + 2;
@@ -133,3 +116,4 @@ int main() {
     }
     putchar('\n');
 }
+
